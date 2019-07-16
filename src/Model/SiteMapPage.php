@@ -44,7 +44,7 @@ class SiteMapPage extends \Page {
 }
 
 
-class SiteMapPageController extends PageController {
+class SiteMapPageController extends \PageController {
 
 	public function index() {
 		return [
