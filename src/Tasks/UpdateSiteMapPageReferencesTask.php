@@ -28,7 +28,7 @@ class UpdateSiteMapPageReferencesTask extends MigrationTask {
         
         DB::query("update `SiteTree_Live` set ClassName = '{$from}' where ClassName = '{$to}'");
         
-        DB::query("update `SiteTreeVersions_Live` set ClassName = '{$from}' where ClassName = '{$to}'");
+        DB::query("update `SiteTree_Versions` set ClassName = '{$from}' where ClassName = '{$to}'");
         
         DB::query("update `SiteTreeLink` set ParentClass = '{$from}' where ParentClass = '{$to}'");
         
