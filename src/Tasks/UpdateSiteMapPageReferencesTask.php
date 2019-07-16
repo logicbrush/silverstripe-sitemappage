@@ -24,6 +24,9 @@ class UpdateSiteMapPageReferencesTask extends MigrationTask {
 
     private function runSql($from, $to) {
         
+		$from = \SilverStripe\Core\Convert::raw2sql($from);
+		$to = \SilverStripe\Core\Convert::raw2sql($to);
+
         DB::query("update `SiteTree` set ClassName = '{$to}' where ClassName = '{$from}'");
         
         DB::query("update `SiteTree_Live` set ClassName = '{$to}' where ClassName = '{$from}'");
