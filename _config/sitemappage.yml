@@ -2,7 +2,4 @@
 name: sitemappage
 ---
 
-Page:
-  extensions:
-    - Logicbrush\RollupPage\Model\WithRollupSupportExtension
   
