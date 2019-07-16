@@ -6,9 +6,12 @@ use SilverStripe\ORM\DB;
 use Logicbrush\SiteMapPage\Model\SiteMapPage;
 use SilverStripe\Dev\MigrationTask;
 
-class UpdatePageReferencesTask extends MigrationTask {
+class UpdateSiteMapPageReferencesTask extends MigrationTask {
 
-    protected $title = "Update SiteMapPage DB References"; 
+    private static $segment = 'UpdateSiteMapPageReferencesTask';
+
+    protected $title = "Update SiteMapPage DB References";
+    
     protected $description = "Updates the references to the class name in the datbase to the FQCN."; 
 
     public function up() {
