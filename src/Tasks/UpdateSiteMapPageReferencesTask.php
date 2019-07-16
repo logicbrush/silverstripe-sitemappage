@@ -24,13 +24,13 @@ class UpdateSiteMapPageReferencesTask extends MigrationTask {
 
     private function runSql($from, $to) {
         
-        DB::query("update `SiteTree` set ClassName = '{$from}' where ClassName = '{$to}'");
+        DB::query("update `SiteTree` set ClassName = '{$to}' where ClassName = '{$from}'");
         
-        DB::query("update `SiteTree_Live` set ClassName = '{$from}' where ClassName = '{$to}'");
+        DB::query("update `SiteTree_Live` set ClassName = '{$to}' where ClassName = '{$from}'");
         
-        DB::query("update `SiteTree_Versions` set ClassName = '{$from}' where ClassName = '{$to}'");
+        DB::query("update `SiteTree_Versions` set ClassName = '{$to}' where ClassName = '{$from}'");
         
-        DB::query("update `SiteTreeLink` set ParentClass = '{$from}' where ParentClass = '{$to}'");
+        DB::query("update `SiteTreeLink` set ParentClass = '{$to}' where ParentClass = '{$from}'");
         
     }
 }
