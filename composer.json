@@ -1,6 +1,7 @@
 {
 		"name": "logicbrush/silverstripe-sitemappage",
 		"description": "A module for the SilverStripe CMS which produces a page listing every (public) page on your site.",
+		"homepage": "https://www.logicbrush.com/specialities/silverstripe-development/",
 		"keywords": ["silverstripe"],
 		"type": "silverstripe-vendormodule",
 		"license": "BSD-3-Clause",
