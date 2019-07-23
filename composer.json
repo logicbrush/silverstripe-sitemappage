@@ -1,29 +1,23 @@
 {
-  "name": "logicbrush/silverstripe-sitemappage",
-  "description": "A module for the SilverStripe CMS which produces a page listing every (public) page on your site.",
-  "homepage": "https://github.com/logicbrush/silverstripe-sitemappage",
-  "keywords": ["silverstripe"],
-  "license": "BSD-3-Clause",
-  "authors": [
-    {"name": "John Learn","email": "jflearn@logicbrush.com"}
-  ],
-  "support": {
-    "issues": "http://github.com/logicbrush/silverstripe-sitemapage/issues"
-  },
-  "require": {
-      "silverstripe/vendor-plugin": "^1.0",
-      "silverstripe/framework": "~4.0"
-  },
-  "autoload": {
-    "psr-4": {
-        "Logicbrush\\SiteMapPage\\": "src/"
-    }
-  },
-  "extra": {
-    "installer-name": "silverstripe-sitemappage",
-    "expose": [
-    ],
-    "screenshots": [
-    ]
-  }
+		"name": "logicbrush/silverstripe-sitemappage",
+		"description": "A module for the SilverStripe CMS which produces a page listing every (public) page on your site.",
+		"keywords": ["silverstripe"],
+		"type": "silverstripe-vendormodule",
+		"license": "BSD-3-Clause",
+		"authors": [{
+				"name": "John Learn",
+				"email": "jflearn@logicbrush.com"
+		}],
+		"require": {
+				"silverstripe/cms": "^4.0"
+		},
+		"autoload": {
+				"psr-4": {
+						"Logicbrush\\SiteMapPage\\": "src/"
+				}
+		},
+		"extra": {
+				"expose": [
+				]
+		}
 }
