@@ -15,9 +15,3 @@ script:
   - if [[ $PHPUNIT_COVERAGE_TEST ]]; then phpdbg -qrr vendor/bin/phpunit --coverage-clover=coverage.xml; fi
   - if [[ $PHPCS_TEST ]]; then vendor/bin/phpcs --standard=vendor/silverstripe/framework/phpcs.xml.dist src/ tests/; fi
 
-after_success:
-  
-    - mv coverage.clover ~/build/$TRAVIS_REPO_SLUG/
-    - cd ~/build/$TRAVIS_REPO_SLUG
-    - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
-
