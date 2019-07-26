@@ -1,0 +1,19 @@
+Page:
+
+  home:
+    Title: 'Home'
+
+  services:
+    Title: 'Services'
+
+  service1:
+    Title: 'Service 1'
+    Parent: =>Page.services
+
+  service2:
+    Title: 'Service 2'
+    Parent: =>Page.services
+
+Logicbrush\SiteMapPage\Model\SiteMapPage:
+  sitemap:
+    Title: 'Site Map'
