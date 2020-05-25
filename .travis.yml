@@ -6,7 +6,7 @@ env:
 
 matrix:
   include:
-    - php: 7.2
+    - php: 7.1
       env: DB=PGSQL RECIPE_VERSION=4.3.6 PHPUNIT_TEST=1
     - php: 7.2
       env: DB=MYSQL RECIPE_VERSION=4.4.5 PHPUNIT_COVERAGE_TEST=1
