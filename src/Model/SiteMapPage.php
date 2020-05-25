@@ -7,10 +7,10 @@ use SilverStripe\ORM\FieldType\DBField;
 
 class SiteMapPage extends \Page {
 
-//private static $icon = 'mysite/images/treeicons/sitemap-page.png';
-	private static $description = "A page that includes a link to every searchable page on the site";
+	private static $icon = 'logicbrush/silverstripe-sitemappage:images/treeicons/sitemap-page.png';
+	private static $description = 'A page that includes a link to every searchable page on the site';
 
-    private static $table_name = "SiteMapPage";
+	private static $table_name = 'SiteMapPage';
 
 	public function getSiteMap() {
 		return $this->makeSiteMap( \Page::get()->filter( 'ParentID', 0 ) );
@@ -36,8 +36,9 @@ class SiteMapPage extends \Page {
 			}
 		}
 
-		if ( $html )
+		if ( $html ) {
 			return DBField::create_field( 'HTMLText', "<ul>$html</ul>" );
+		}
 
 		return false;
 	}
