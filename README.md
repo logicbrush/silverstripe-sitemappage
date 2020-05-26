@@ -19,7 +19,3 @@ composer require "logicbrush/silverstripe-sitemappage"
 ## Usage
 
 This module defines a new page class of type `Logicbrush\SiteMapPage\Model\SiteMapPage`.  When you create an instance of this page type it will include a heirarchical list of links to all the pages on the site after the content.
-
-### Options
-
-none.
