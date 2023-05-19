@@ -29,5 +29,10 @@
 			"Logicbrush\\SiteMapPage\\": "src/",
 			"Logicbrush\\SiteMapPage\\Tests\\": "tests/"
 		}
+	},
+	"config": {
+		"allow-plugins": {
+			"composer/installers": true
+		}
 	}
 }
