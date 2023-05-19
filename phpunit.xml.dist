@@ -15,5 +15,8 @@
   </logging>
   <php>
     <includePath>app/code</includePath>
+    <env name="SS_DATABASE_CLASS" value="SQLite3Database" />
+    <env name="SS_SQLITE_DATABASE_PATH" value=":memory:" />
+    <env name="SS_DATABASE_NAME" value="testing" />
   </php>
 </phpunit>

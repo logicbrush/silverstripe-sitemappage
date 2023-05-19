@@ -35,4 +35,3 @@ jobs:
           php_extensions: intl
           bootstrap: vendor/autoload.php
           configuration: phpunit.xml.dist
-          args: --coverage-text
