@@ -16,17 +16,20 @@ jobs:
       - uses: actions/checkout@v3
       - uses: php-actions/composer@v6
         with:
-          args: --ignore-platform-reqs
-      - name: PHPUnit Tests
-        uses: php-actions/phpunit@master
-        with:
-          vendored_phpunit_path: vendor/bin/phpunit
-          configuration: phpunit.xml.dist
           php_extensions: xdebug intl
-          bootstrap: vendor/autoload.php
-          args: --coverage-clover ./coverage.xml
-        env:
-          XDEBUG_MODE: coverage
+      # - name: PHPUnit Tests
+      #   uses: php-actions/phpunit@master
+      #   with:
+      #     vendored_phpunit_path: vendor/bin/phpunit
+      #     configuration: phpunit.xml.dist
+      #     bootstrap: vendor/autoload.php
+      #     args: --coverage-clover ./coverage.xml
+      #   env:
+      #     XDEBUG_MODE: coverage
+      - run: |
+          XDEBUG_MODE=coverage \
+          ./vendor/bin/phpunit -c phpunit.xml.dist \
+          --coverage-clover ./coverage.xml
       - run: |
           find src -name "*.php" -exec ./bin/metrics annotate ./coverage.xml {} \;
       - run: |
