@@ -17,7 +17,8 @@
 		"silverstripe/cms": "^4.0"
 	},
 	"require-dev": {
-		"phpunit/phpunit": "^5.7||^9.5"
+		"phpunit/phpunit": "^5.7||^9.5",
+		"silverstripe/sqlite3": "^2.2"
 	},
 	"extra": {
 		"expose": [
