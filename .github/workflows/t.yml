@@ -20,9 +20,10 @@ jobs:
       - name: PHPUnit Tests
         uses: php-actions/phpunit@master
         with:
+          vendored_phpunit_path: vendor/bin/phpunit
+          configuration: phpunit.xml.dist
           php_extensions: xdebug intl
           bootstrap: vendor/autoload.php
-          configuration: phpunit.xml.dist
           args: --coverage-clover ./coverage.xml
         env:
           XDEBUG_MODE: coverage
