@@ -15,11 +15,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: php-actions/composer@v6
-        with:
-          php_extensions: xdebug intl
+        with: &php-config
+          php_version: 8.2
+          php_extensions: xebug intl
       - name: PHPUnit Tests
         uses: php-actions/phpunit@master
         with:
+          <<: *php-config
           bootstrap: vendor/autoload.php
           configuration: phpunit.xml.dist
           args: --coverage-clover ./coverage.xml
