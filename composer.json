@@ -32,7 +32,7 @@
 			"Logicbrush\\SiteMapPage\\": "src/",
 			"Logicbrush\\SiteMapPage\\Tests\\": "tests/"
 		},
-		"exclude-from-classmap": ["app/"]
+		"exclude-from-classmap": ["/app/"]
 	},
 	"config": {
 		"allow-plugins": {
