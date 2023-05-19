@@ -1,0 +1,35 @@
+name: "Continuous Integration"
+
+on: 
+  - pull_request
+  - push
+
+jobs:
+
+  tests:
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - operating-system: 'ubuntu-latest'
+            php-version: '8.1'
+          - operating-system: 'ubuntu-latest'
+            php-version: '8.0'
+          - operating-system: 'ubuntu-latest'
+            php-version: '7.4'
+  
+    name: PHP ${{ matrix.php-version }}
+    runs-on: ${{ matrix.operating-system }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: php-actions/composer@v6
+        with:
+          php_version: ${{ matrix.php-version }}
+      - name: PHPUnit Tests
+        uses: php-actions/phpunit@master
+        with:
+          php_version: ${{ matrix.php-version }}
+          bootstrap: vendor/autoload.php
+          configuration: phpunit.xml.dist
+          args: --coverage-text
