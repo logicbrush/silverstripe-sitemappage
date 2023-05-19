@@ -31,7 +31,8 @@
 		"psr-4": {
 			"Logicbrush\\SiteMapPage\\": "src/",
 			"Logicbrush\\SiteMapPage\\Tests\\": "tests/"
-		}
+		},
+		"exclude-from-classmap": ["app/"]
 	},
 	"config": {
 		"allow-plugins": {
