@@ -13,4 +13,7 @@
   <logging>
     <log type="coverage-clover" target="clover.xml"/>
   </logging>
+  <php>
+    <includePath>app/code</includePath>
+  </php>
 </phpunit>
