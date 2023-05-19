@@ -1,10 +1,4 @@
 <?php
-/**
- * src/Model/SiteMapPage.php
- *
- * @package default
- */
-
 
 namespace Logicbrush\SiteMapPage\Model;
 
@@ -21,20 +15,11 @@ class SiteMapPage extends Page {
 
 	private static $table_name = 'SiteMapPage';
 
-	/**
-	 *
-	 * @return unknown
-	 */
 	public function getSiteMap() {
 		return $this->makeSiteMap( \Page::get()->filter( 'ParentID', 0 ) );
 	}
 
 
-	/**
-	 *
-	 * @param unknown $pages
-	 * @return unknown
-	 */
 	private function makeSiteMap( $pages ) {
 
 		$html = "";
@@ -45,7 +30,7 @@ class SiteMapPage extends Page {
 				if ( $page instanceof Blog ) {
 					// Sort blog entries by descending date.
 					$html .= $this->makeSiteMap(
-						$page->getBlogPosts()
+						 $page->getBlogPosts()
 					);
 				} else {
 					$html .= $this->makeSiteMap( $page->AllChildren() );
@@ -67,10 +52,6 @@ class SiteMapPage extends Page {
 
 class SiteMapPageController extends PageController {
 
-	/**
-	 *
-	 * @return unknown
-	 */
 	public function index() {
 		return [
 			'Content' => DBField::create_field( 'HTMLText', $this->Content . "\n\n" . $this->SiteMap )
