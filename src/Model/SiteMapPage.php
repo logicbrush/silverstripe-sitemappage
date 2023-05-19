@@ -30,7 +30,7 @@ class SiteMapPage extends Page {
 				if ( $page instanceof Blog ) {
 					// Sort blog entries by descending date.
 					$html .= $this->makeSiteMap(
-						$page->getBlogPosts()
+						 $page->getBlogPosts()
 					);
 				} else {
 					$html .= $this->makeSiteMap( $page->AllChildren() );
