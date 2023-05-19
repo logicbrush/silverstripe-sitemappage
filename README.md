@@ -1,9 +1,5 @@
 # silverstripe-sitemappage
 
-[![Build Status](https://travis-ci.org/logicbrush/silverstripe-sitemappage.svg?branch=master)](https://travis-ci.org/logicbrush/silverstripe-sitemappage)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/logicbrush/silverstripe-sitemappage/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/logicbrush/silverstripe-sitemappage/?branch=master)
-[![codecov.io](https://codecov.io/github/logicbrush/silverstripe-sitemappage/coverage.svg?branch=master)](https://codecov.io/github/logicbrush/silverstripe-sitemappage?branch=master)
-
 A module for the SilverStripe CMS which produces a page listing every (public) page on your site.
 
 ## Why?

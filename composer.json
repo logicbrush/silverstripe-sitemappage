@@ -13,20 +13,29 @@
 		"email": "jflearn@logicbrush.com"
 	}],
 	"require": {
+		"php": "^7.4||^8.0",
 		"silverstripe/cms": "^4.0"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "^9.5",
+		"silverstripe/sqlite3": "^2.2",
+		"logicbrush/metrics": "^0.2.0"
 	},
 	"extra": {
 		"expose": [
 			"images"
 		]
 	},
-	"require-dev": {
-		"phpunit/phpunit": "^5.7"
-	},
 	"autoload": {
 		"psr-4": {
 			"Logicbrush\\SiteMapPage\\": "src/",
 			"Logicbrush\\SiteMapPage\\Tests\\": "tests/"
+		}
+	},
+	"config": {
+		"allow-plugins": {
+			"composer/installers": true,
+			"silverstripe/vendor-plugin": true
 		}
 	}
 }
