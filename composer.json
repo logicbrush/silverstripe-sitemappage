@@ -29,10 +29,13 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Logicbrush\\SiteMapPage\\": "src/",
+			"Logicbrush\\SiteMapPage\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
 			"Logicbrush\\SiteMapPage\\Tests\\": "tests/"
-		},
-		"exclude-from-classmap": ["/app/"]
+		}
 	},
 	"config": {
 		"allow-plugins": {
