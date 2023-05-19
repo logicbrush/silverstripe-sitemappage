@@ -7,7 +7,6 @@ on:
 jobs:
 
   tests:
-
     strategy:
       fail-fast: false
       matrix:
@@ -28,10 +27,7 @@ jobs:
       - uses: php-actions/composer@v6
         with:
           php_version: ${{ matrix.php-version }}
-      - name: PHPUnit Tests
-        uses: php-actions/phpunit@master
-        with:
-          php_version: ${{ matrix.php-version }}
           php_extensions: intl
-          bootstrap: vendor/autoload.php
-          configuration: phpunit.xml.dist
+      - run: |
+          ./vendor/bin/phpunit -c phpunit.xml.dist \
+          --coverage-clover ./coverage.xml

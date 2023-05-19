@@ -10,32 +10,26 @@ on:
 jobs:
 
   tidy:
-    name: "Annotate with Metrics"
     runs-on: 'ubuntu-latest'
     steps:
       - uses: actions/checkout@v3
       - uses: php-actions/composer@v6
         with:
           php_extensions: xdebug intl
-      # - name: PHPUnit Tests
-      #   uses: php-actions/phpunit@master
-      #   with:
-      #     vendored_phpunit_path: vendor/bin/phpunit
-      #     configuration: phpunit.xml.dist
-      #     bootstrap: vendor/autoload.php
-      #     args: --coverage-clover ./coverage.xml
-      #   env:
-      #     XDEBUG_MODE: coverage
-      - run: |
+      - name: Generate Code Coverage
+        run: |
           XDEBUG_MODE=coverage \
           ./vendor/bin/phpunit -c phpunit.xml.dist \
           --coverage-clover ./coverage.xml
-      - run: |
+      - name: Annotate with Metrics
+        run: |
           find src -name "*.php" -exec ./bin/metrics annotate ./coverage.xml {} \;
-      - run: |
+      - name: Tidy Source Code
+        run: |
           find tests -name "*.php" -exec ./vendor/bin/phptidy.php replace {} \;
           find src -name "*.php" -exec ./vendor/bin/phptidy.php replace {} \;
-      - run: |
+      - name: Push Back Changes
+        run: |
           git diff --exit-code src || ( \
             git config user.name github-actions && \
             git config user.email github-actions@github.com && \
