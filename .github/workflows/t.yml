@@ -18,7 +18,7 @@ jobs:
       - name: PHPUnit Tests
         uses: php-actions/phpunit@master
         with:
-          php_extensions: xdebug
+          php_extensions: xdebug intl
           bootstrap: vendor/autoload.php
           configuration: phpunit.xml.dist
           args: --coverage-clover ./coverage.xml
