@@ -23,6 +23,7 @@ class SiteMapPage extends Page {
 
 	/**
 	 *
+	 * @Metrics( crap = 1 )
 	 * @return unknown
 	 */
 	public function getSiteMap() {
@@ -32,6 +33,7 @@ class SiteMapPage extends Page {
 
 	/**
 	 *
+	 * @Metrics( crap = 7.60 )
 	 * @param unknown $pages
 	 * @return unknown
 	 */
@@ -69,6 +71,7 @@ class SiteMapPageController extends PageController {
 
 	/**
 	 *
+	 * @Metrics( crap = 2, uncovered = true )
 	 * @return unknown
 	 */
 	public function index() {
