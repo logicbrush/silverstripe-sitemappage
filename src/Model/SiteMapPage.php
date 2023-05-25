@@ -32,7 +32,7 @@ class SiteMapPage extends Page {
 
 	/**
 	 *
-	 * @Metrics( crap = 7.60 )
+	 * @Metrics( crap = 6.44 )
 	 * @param unknown $pages
 	 * @return unknown
 	 */
