@@ -26,7 +26,7 @@ class SiteMapPageTest extends SapphireTest {
 			$html->Value, [
 				'<ul><li><a href="/">Home</a></li><li><a href="/services">Services</a><ul><li><a href="/services/service-1">Service 1</a></li><li><a href="/services/service-2">Service 2</a></li></ul></li><li><a href="/site-map">Site Map</a></li></ul>',
 				'<ul><li><a href="/">Home</a></li><li><a href="/services/">Services</a><ul><li><a href="/services/service-1/">Service 1</a></li><li><a href="/services/service-2/">Service 2</a></li></ul></li><li><a href="/site-map/">Site Map</a></li></ul>',
-				]
+			]
 		);
 	}
 
